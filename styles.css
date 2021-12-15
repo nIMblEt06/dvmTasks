@@ -1,0 +1,304 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #0f1112;
+    color: white;
+    z-index: -2;
+}
+.navbar{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f1112;
+    color: white;
+    border-bottom: 0.05rem solid #151617;
+    height: 51px;
+}
+.brand-title img{
+    width: 80px;
+    position: relative;
+    left: 15px;
+    top: 5px;
+}
+
+.navbar-links ul{
+    margin: 0;
+    padding:0;
+    display: flex;
+    
+}
+.navbar{
+    transition: all 0.5s ease-in;
+}
+.navbar-links li{
+    list-style: none;
+    transition: 0.3s ease-in;
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: #8b8b8c;
+    padding: 1rem;
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    border: 0.05rem solid #151617;
+    letter-spacing: 3px;
+    font-size: 14px;
+    height: 100%;
+    text-transform: uppercase;
+    transition: 0.3s ease-in;
+}
+.icons{
+    display: none;
+    justify-content: center;
+}
+.icons img{
+    width: 35px;
+}
+#instagram1 img{
+    width: 48px;
+}
+.navbar-links li:hover{
+    background-color: #2c2c2d;
+}
+.navbar-links li:hover >a{
+    color: white;
+}
+#active{
+    background-color: #2c2c2d;
+}
+#active a{
+    color: white;
+}
+.toggle-button{
+    position: absolute;
+    top: 2vh;
+    right: 3vw;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.navbar-links a{
+    text-decoration: none;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+#facebook img{
+    width: 27px;
+    
+}
+.socials a{
+    text-decoration: none;
+}
+.socials{
+    position: relative;
+    right: 1vw;
+}
+#instagram img{
+    width: 37px;
+}
+#google img{
+    width: 26px;
+}
+#twitter img{
+    width: 30px;
+}
+
+@media(max-width: 940px){
+    .toggle-button{
+        display: flex;
+        margin-top: 7px;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+        transition: 0.3s;
+    }
+    .socials{
+        display: none;
+        width: 100%;
+    }
+    .icons{
+        display: flex;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 1;
+    }
+    
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100%;
+        margin: 15px 0px;
+        z-index: 1;
+    }
+    .navbar-links li{
+        text-align: left;
+    }
+    .navbar-links li a{
+        padding: 1.5rem 1rem;
+        border: none;
+        text-transform: capitalize;
+        color: white;
+    }
+    #active{
+        background-color: #0f1112;
+    }
+    .navbar-links li:hover{
+        background-color: #0f1112;
+    }
+    #active a{
+        color: #25a99c;
+    }
+    .navbar-links li:hover >a{
+        color: #25a99c;
+    }
+    .navbar-links.active{
+        display: flex;
+    }      
+    .brand-title img{
+        top: 15px;
+    }
+    .achieves{
+        flex-direction: column;
+    }
+    .menuBtn{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: solid 1px white; */
+        width: 35px;
+        min-height: 10px;
+        cursor: pointer;
+        transition: all .5s ease-in-out
+    }
+    .menuBtnBurger{
+        height: 3px;
+        width: 30px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .menuBtnBurger::before, .menuBtnBurger::after{
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 30px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .menuBtnBurger::before{
+        transform: translateY(-10px);
+    }
+    .menuBtnBurger::after{
+        transform: translateY(10px);
+    }
+    .menuBtn.open .menuBtnBurger{
+        transform: translateX(-15px);
+        background: transparent;
+    }
+    .menuBtn.open .menuBtnBurger::before{
+        transform: rotate(45deg) translate(17px, -17px);
+    }
+    .menuBtn.open .menuBtnBurger::after{
+        transform: rotate(-45deg) translate(17px, 17px);
+    }
+}
+/* Intros */
+#intro{
+    display: flex;
+    position: relative;
+    margin: 5vh auto;
+    max-width: 600px;
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+#intro h1{
+    font-family: 'Manrope', sans-serif;
+    text-align: center;
+    font-size: 57px;
+}
+#intro img{
+    width: 80vw;
+    z-index: -1;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text-Decor */
+.h-primary{
+    font-size: 80px;
+    color: #25a99c;
+    margin: 0;
+}
+.h-secondary{
+    font-size: 20px;
+}
+/* Content  */  
+.achieves{
+    display: flex;
+    justify-content: center;
+}
+.achieves .box{
+    display: flex;
+    padding: 34px;
+    margin: 3px 6px;
+    flex-direction: column;
+
+}
+.box p{
+    color: #8b8b8c;
+    width: 70%;
+}
+#intro p{
+    color: #8b8b8c;
+    line-height: 35px;
+}
+#intro h2{
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.intro{
+    margin-top: -10vh;
+    position: relative;
+    min-width: 40vw;
+    padding: 50px 70px;
+    background: rgba(0,0,0,0.3);
+}
+.intro h2::before{
+    content: "";
+    position: absolute;
+    height: 52px;
+    width: 1px;
+    background: #25a99c;
+    transform: translate(103px, -93px);
+    opacity: 0.8;
+    box-shadow: 0 1px 2px rgba(12, 195, 219, 0.336);
+}
+.img{
+    width: 78vw;
+    height: 600px;
+    background: url(/Assets/Center.png) no-repeat center center / cover;
+    margin-top: -236px;
+    z-index: -1;
+}
