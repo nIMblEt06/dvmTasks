@@ -314,3 +314,12 @@ body{
     margin-top: -236px;
     z-index: -1;
 }
+/* Preloader  */
+#preloader{
+    background: #0f1112 url('Assets/Cube-1s-200px.gif') no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+
+}
