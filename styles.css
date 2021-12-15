@@ -279,10 +279,10 @@ body{
     margin-bottom: 40px;
 }
 .intro{
-    margin-top: -10vh;
+    margin-top: -8vh;
     position: relative;
-    min-width: 40vw;
-    padding: 50px 70px;
+    min-width: 55vw;
+    padding: 45px 70px;
     background: rgba(0,0,0,0.3);
 }
 .intro h2::before{
