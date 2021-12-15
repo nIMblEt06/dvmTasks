@@ -137,7 +137,16 @@ body{
         align-items: flex-start;
         z-index: 1;
     }
-    
+    .nav_menu{
+        height: 60vh;
+        position: relative;
+        top:30px;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        flex-direction: column;
+        background: #0f1112;
+    }
     .navbar-links ul{
         flex-direction: column;
         width: 100%;
